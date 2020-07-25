@@ -21,7 +21,6 @@
 #include "../../SDL_internal.h"
 
 #if SDL_VIDEO_DRIVER_ORBIS
-#include <types/userservice.h>
 #include <orbisKeyboard.h>
 
 

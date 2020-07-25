@@ -426,7 +426,7 @@ SDL_LogOutput(void *userdata, int category, SDL_LogPriority priority,
     }
 #elif defined(__ORBIS__)
     {
-        debugNetPrintf(DEBUG, "%s: %s\n", SDL_priority_prefixes[priority], message);
+        debugNetPrintf(DEBUGNET_DEBUG, "%s: %s\n", SDL_priority_prefixes[priority], message);
     }
 #endif
 #if HAVE_STDIO_H && !defined(__ORBIS__)

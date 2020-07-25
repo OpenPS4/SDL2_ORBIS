@@ -25,7 +25,7 @@
 #include "SDL_hints.h"
 #include "../SDL_sysrender.h"
 
-#include <kernel.h>
+#include <sys/kernel.h>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
