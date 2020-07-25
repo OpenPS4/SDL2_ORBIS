@@ -1,35 +1,20 @@
-#SDL2 port for ORBIS from bigboss aka Antonio Jose Ramos Márquez @psxdev
-ifndef Ps4Sdk
-ifdef ps4sdk
-Ps4Sdk := $(ps4sdk)
-endif
-ifdef PS4SDK
-Ps4Sdk := $(PS4SDK)
-endif
-ifndef Ps4Sdk
-$(error Neither PS4SDK, Ps4Sdk nor ps4sdk set)
-endif
+ifndef ORBISDEV
+$(error ORBISDEV, is not set)
 endif
 
 target := ps4_lib
 OutPath := lib
-TargetFile := libSDL2
-AllTarget = $(OutPath)/$(TargetFile).a
+TargetFile := libSDL.a
 
+include $(ORBISDEV)/make/ps4sdklib.mk
+CompilerFlags +=-D__PS4__ -D__ORBIS__
+IncludePath += -I$(ORBISDEV)/usr/include -I$(ORBISDEV)/usr/include/c++/v1 -I$(ORBISDEV)/usr/include/orbis
 
+# we are just shipping a cross builted (on linux) archive here!
 
-include $(Ps4Sdk)/make/ps4sdk.mk
-
-
-$(OutPath)/$(TargetFile).a: $(ObjectFiles)
-	$(dirp)
-	$(archive)
+$(AllTarget): $(ObjectFiles)
+	@echo "$(TargetFile) Compiled!"
 
 install:
-	@cp $(OutPath)/$(TargetFile).a $(Ps4Sdk)/lib
-	@mkdir -p $(Ps4Sdk)/include/SDL2
-	@cp include/*.h $(Ps4Sdk)/include/SDL2
-	@echo "Installed!"
-
-CompilerFlags += -D__ORBIS__ 
-
+# ToDo: copy to include and lib directories
+	@echo "$(TargetFile) Installed!"
