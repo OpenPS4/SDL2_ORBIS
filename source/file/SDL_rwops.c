@@ -51,7 +51,7 @@
 
 #ifdef __ORBIS__
 #include <fcntl.h>
-#include <ps4link.h>
+#include <orbislink.h>
 #endif /* __ORBIS__ */
 
 #ifdef __APPLE__

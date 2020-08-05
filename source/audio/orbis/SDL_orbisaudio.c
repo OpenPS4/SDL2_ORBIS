@@ -34,7 +34,7 @@
 #include "../SDL_sysaudio.h"
 #include "SDL_orbisaudio.h"
 
-#include <kernel.h>
+#include <orbis/libkernel.h>
 #include <orbisAudio.h>
 
 

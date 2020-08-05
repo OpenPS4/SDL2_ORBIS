@@ -19,6 +19,6 @@
   3. This notice may not be removed or altered from any source distribution.
 */
 
-#include <kernel.h>
+#include <orbis/libkernel.h>
 
 typedef ScePthread SYS_ThreadHandle;

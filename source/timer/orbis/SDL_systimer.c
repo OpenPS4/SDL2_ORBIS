@@ -29,7 +29,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <sys/time.h>
-#include <kernel.h>
+#include <orbis/libkernel.h>
 
 static uint64_t start;
 static SDL_bool ticks_started = SDL_FALSE;

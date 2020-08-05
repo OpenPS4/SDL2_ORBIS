@@ -21,7 +21,7 @@
 #include "../../SDL_internal.h"
 
 #if SDL_JOYSTICK_ORBIS
-#include <kernel.h>
+#include <orbis/libkernel.h>
 #include <orbisPad.h>
 
 #include <stdio.h>      /* For the definition of NULL */

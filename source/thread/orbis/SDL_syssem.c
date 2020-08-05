@@ -30,7 +30,7 @@
 #include "SDL_error.h"
 #include "SDL_thread.h"
 
-#include <kernel.h>
+#include <orbis/libkernel.h>
 typedef void *SceKernelSema;
 
 struct SDL_semaphore {
